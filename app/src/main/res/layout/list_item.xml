@@ -8,22 +8,22 @@
         <TextView
             android:id="@+id/magnitude"
             style="@style/dimension"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="7.2"></TextView>
 
         <TextView
-            android:id="@+id/city"
+            android:id="@+id/location"
             style="@style/dimension"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:text="Multai"></TextView>
 
         <TextView
             android:id="@+id/date"
             style="@style/dimension"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="June.2,2022"></TextView>
+
+        <TextView
+        android:id="@+id/time"
+            style="@style/dimension"
+        android:text="3:00 PM" />
 
 </LinearLayout>

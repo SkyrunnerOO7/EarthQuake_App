@@ -1,20 +1,20 @@
 package com.example.android.quakereport;
 
-public class Data {
+public class Earthquake {
     // magnitude
     private String mMagnitude;
 
     // City names
-    private String mCity;
+    private String mLocation;
 
     // Date and time
-    private String mDate;
+    private long mDate;
 
 
-    public Data(String magnitude, String city, String date)
+    public Earthquake(String magnitude, String location, long date)
     {
         mMagnitude = magnitude;
-        mCity = city;
+        mLocation = location;
         mDate = date;
     }
 
@@ -28,14 +28,14 @@ public class Data {
     /**
      * Get the City name
      */
-    public String getCity() {
-        return mCity;
+    public String getLocation() {
+        return mLocation;
     }
 
     /**
      * Get the date
      */
-    public String getDate() {
+    public long getTimeInMilliseconds() {
         return mDate;
     }
 }

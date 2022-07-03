@@ -16,7 +16,6 @@
 package com.example.android.quakereport;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,20 +31,21 @@ public class EarthquakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
 
-        // Create a fake list of earthquake locations.
-        ArrayList<Data> earthquakes = new ArrayList<>();
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
-        earthquakes.add(new Data("10", "London", "10/10/2022"));
 
+        // Create a fake list of earthquake locations.
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+       /* earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+        earthquakes.add(new Earthquake("10", "London", "10/10/2022"));
+*/
 
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
