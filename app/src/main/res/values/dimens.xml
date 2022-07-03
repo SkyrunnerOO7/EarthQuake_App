@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <style name="dimension">
+      <item name="android:layout_weight">1</item>
+      <item name="android:textSize">20sp</item>
+      <item name="android:textAlignment">center</item>
+      <item name="android:padding">15dp</item>
+   </style>
+</resources>
