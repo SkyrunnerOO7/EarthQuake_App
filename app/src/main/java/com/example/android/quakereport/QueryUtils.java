@@ -6,10 +6,7 @@ import org.json.JSONObject;
 import android.util.Log;
 
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.SimpleTimeZone;
 
 /**
  * Helper methods related to requesting and receiving earthquake data from USGS.
@@ -63,15 +60,17 @@ public final class QueryUtils {
 
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
 
-                String magnitude = properties.getString("mag");
+                Double magnitude = properties.getDouble("mag");
                 String location = properties.getString("place");
                 long time = properties.getLong("time");
-//                Date dateObject = new Date(timeInMilliseconds);
-//
-//                SimpleDateFormat dateFormatter = new SimpleDateFormat("MM DD, yyyy");
-//                String dateToDisplay = dateFormatter.format(dateObject);
 
-                Earthquake earthquake = new Earthquake(magnitude, location, time);
+                // Extract the value for the key called "url"
+                String url = properties.getString("url");
+
+                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // and url from the JSON response.
+                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
+
                 earthquakes.add(earthquake);
             }
 

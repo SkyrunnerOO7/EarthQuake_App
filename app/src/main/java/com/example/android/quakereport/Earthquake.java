@@ -2,7 +2,7 @@ package com.example.android.quakereport;
 
 public class Earthquake {
     // magnitude
-    private String mMagnitude;
+    private double mMagnitude;
 
     // City names
     private String mLocation;
@@ -10,18 +10,22 @@ public class Earthquake {
     // Date and time
     private long mDate;
 
+    // Url of the earthquake
+    private String mUrl;
 
-    public Earthquake(String magnitude, String location, long date)
+
+    public Earthquake(Double magnitude, String location, long date, String url)
     {
         mMagnitude = magnitude;
         mLocation = location;
         mDate = date;
+        mUrl = url;
     }
 
     /**
      * Get the magnitude
      */
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
@@ -37,5 +41,9 @@ public class Earthquake {
      */
     public long getTimeInMilliseconds() {
         return mDate;
+    }
+
+    public String getUrl() {
+        return mUrl;
     }
 }
